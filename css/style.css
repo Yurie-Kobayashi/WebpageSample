@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+/* ########## 画面サイズ不問 ########## */
+
+/* 背景 */
+body{
+  background-image: url(../img/background-image2.png);
+  margin-top: 0;
+  font-family: 'BIZ UD明朝', serif;
+  }
+
+.main{
+  background-image: url(../img/background-image.png);
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+
+.eye-chatch{
+    position: relative;
+}
+
+/* 画像 */
+.eye-chatch img{
+  width: 100%;
+}
+
+#tp1-image img,#tp2-image img,.yokai-area img{
+        width: 100%;
+        object-fit: contain;
+}
+    
+
+
+/* リスト */
+ul{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0.3em;
+  list-style-type: none;
+  }
+
+/* liの横並び準備 */
+ul:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+li{
+ /* 桜アイコンを見切れさせないためにpadding */
+  padding: 1em;
+    
+ /* 横並び */
+  float: left;
+  width: auto;
+}
+
+.header hr{
+  height: 5px;
+  background-color: #223a70;
+  border: none;
+  border-bottom: 2px #eebbcb solid;
+  margin-top: 0;
+}
+
+li:hover{
+  /*Focus時*/
+  background-color: #a22041;
+  color: #ffffff;
+  border-radius: 10px;
+  transition: 0.5s ;
+}
+
+li#top-menu-head:hover{
+  background-color: transparent;
+  color: initial;
+}
+
+.menu li#top-menu-head{
+  padding-left: 3em;
+  background-image: url(../img/flower-icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 2.5em;
+  }
+
+/* テキスト */
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer {
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+    background-color: #223a70;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.footer:hover{
+    background-color:#a22041;
+    transition: 0.5s ;
+}
+
+p{font-size: 20px;
+  margin-top: 0}
+
+.book-info p{
+    padding-left: 2em
+}
+
+h2{
+    padding-left: 1em;
+    padding-top: 20px;
+    margin-bottom: 0
+}
+
+
+.credits a{
+    margin-left: 3em;
+    border-bottom: solid 1px #223a70;
+    color: #223a70;
+}
+
+.credits a:hover{
+  color: #a22041;
+  border-bottom: solid 1px #a22041;
+}
+
+/* アイキャッチのコピー文 */
+/*MEMO:画像にポインタをあわせたとき、小泉八雲 怪談が、じわっと(1秒ほどかけて)紅色に染まってほしい→JS*/
+.eye-chatch p{
+  position: absolute;
+  top:0;
+  left: 55%;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow:1px 5px 0px #203744;
+}
+
+#home-copy-1{
+    top:20%;
+    font-size:2vw;  
+}
+
+#home-copy-2{
+    top:30%;
+    font-size:4vw;
+
+}
+
+#home-copy-3{
+    top:40%;
+    font-size:8vw;
+    text-shadow:1px 5px 0px #203744;
+  }
+
+#home-copy-4{
+    top:60%;
+    left: 75%;
+    font-size:2vw;
+}
+
+h1{
+  font-weight: bold;
+  border-bottom: 3px #223a70 solid;
+  padding-left: 1.7em;
+  padding-bottom: 0.2em;
+  margin-top: 50px;
+  text-shadow:1px 2px 1px #eaedf7;
+    
+  /*接頭花びらの付与*/
+  background-image:url(../img/flower-petal-icon2.png);
+  background-repeat: no-repeat;
+  background-position: 2px 0px;
+  background-size: 1.5em;
+  padding-bottom: 0.5em;
+  padding-top:0.3em;
+}
+
+
+/* ########## 935px以上 ########## */
+@media(min-width: 935px)
+{
+  /*mainのwidthが最大になったら、eye-chatch上の文字サイズを固定*/
+  #home-copy-1{
+  font-size: 18.7px;
+  }
+
+  #home-copy-2{
+  font-size: 37.5px;     
+  }
+
+  #home-copy-3{
+  font-size: 75.0px;      
+  }
+
+  #home-copy-4{
+  font-size:18.7px; 
+  }
+}
+
+
+/* ########## 651px以上 ########## */
+@media(min-width: 651px)
+{
+    /* topic1 を横並び表示にする */
+    #topic1,#topic2:after{
+      content: "";
+      height: auto;
+      overflow: hidden;
+      display: block;
+      clear: both;
+    }
+    
+    #tp1-image,#tp2-image{
+      box-sizing: border-box;
+      float: left;
+      width:40%;
+      padding-left:1em;
+      padding-right: 1em;
+    }
+    
+    #tp1-text,#tp2-text{
+      float: left;
+      width: 55%;
+    }
+}
+
+
+/* ########## 650px以下 ########## */
+@media(max-width: 650px)
+{
+    /* 画像と文章の間に隙間を設定 */
+    #tp1-text,#tp2-text{
+        margin-top: 1em;
+    }
+
+}
